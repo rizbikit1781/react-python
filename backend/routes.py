@@ -15,6 +15,7 @@ def create_friend():
     try:
         data = request.json
         
+        #Validation
         required_fields = ["name", "role", "description", "gender"]
         
         for field in required_fields:
