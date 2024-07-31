@@ -12,9 +12,6 @@ import {
     Modal,
     Input,
     Textarea,
-    Radio,
-    RadioGroup,
-    Stack,
     ModalFooter,
     IconButton,
   } from "@chakra-ui/react";
@@ -45,12 +42,12 @@ const EditUser = ({ user }) => {
                 {/* Left */}
                 <FormControl>
                   <FormLabel>Full Name</FormLabel>
-                  <Input placeholder="John Doe" />
+                  <Input placeholder={user.name} />
                 </FormControl>
                 {/* Right */}
                 <FormControl>
                   <FormLabel>Role</FormLabel>
-                  <Input placeholder="Software Engineer" />
+                  <Input placeholder={user.role} />
                 </FormControl>
                 {/* Description */}
               </Flex>
