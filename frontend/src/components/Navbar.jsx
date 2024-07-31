@@ -13,7 +13,7 @@ import { FaMoon } from "react-icons/fa";
 import { IoMdSunny } from "react-icons/io";
 import CreateUser from "./CreateUser";
 
-const Navbar = () => {
+const Navbar = ({ setUsers }) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -44,7 +44,7 @@ const Navbar = () => {
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <FaMoon /> : <IoMdSunny size={20}/>}
             </Button>
-            <CreateUser />
+            <CreateUser setUsers={setUsers}/>
           </Flex>
         </Flex>
       </Box>
