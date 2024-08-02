@@ -1,4 +1,3 @@
-# TODO: UPDATE THIS FILE FOR DEPLOYMENT
 
 from flask import Flask, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
