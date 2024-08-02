@@ -108,7 +108,8 @@ const EditUser = ({ user, setUsers }) => {
                 <Textarea
                   resize={"none"}
                   overflow={"hidden"}
-                  placeholder="Test"
+                  value={inputs.description} 
+                  onChange={(e) => setInputs((prev) => ({ ...prev, description: e.target.value }))}
                 />
               </FormControl>
             </ModalBody>

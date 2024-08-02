@@ -57,7 +57,12 @@ const CreateUser = ({ setUsers }) => {
         position: "top-center",
       });
       onClose();
-      
+      setInputs({
+        name: "",
+        role: "",
+        description: "",
+        gender: "",
+      });
       setUsers((prevUsers) => [...prevUsers, data])
 
     } catch (error) {
@@ -70,12 +75,7 @@ const CreateUser = ({ setUsers }) => {
       });
     } finally {
       setIsLoading(false);
-      setInputs({
-        name: "",
-        role: "",
-        description: "",
-        gender: "",
-      });
+      
     }
   };
 
