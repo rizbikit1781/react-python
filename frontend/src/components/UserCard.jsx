@@ -12,8 +12,21 @@ import {
 import React from "react";
 import { BiTrash } from "react-icons/bi";
 import EditUser from "./EditUser";
+import { BASE_URL } from "../App";
 
 const UserCard = ({ user }) => {
+
+
+  const handleDeleteUser = async () => {
+    try {
+      const res = await fetch(BASE_URL, + "/friends/" + user.id, {
+        
+      })
+    } catch (error) {
+      
+    }
+  }
+
   return (
     <Card>
       <CardHeader>
@@ -33,6 +46,7 @@ const UserCard = ({ user }) => {
               size={"sm"}
               aria-label="See menu"
               icon={<BiTrash size={20} />}
+              onClick={handleDeleteUser}
             />
           </Flex>
         </Flex>
